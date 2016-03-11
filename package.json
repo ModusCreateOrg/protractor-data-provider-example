@@ -1,0 +1,17 @@
+{
+  "name": "repeat-test-blogpost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "protractor.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^2.21.2",
+    "jasmine-data-provider": "^2.2.0",
+    "jasmine-spec-reporter": "^2.4.0",
+    "protractor": "^3.1.1"
+  }
+}
