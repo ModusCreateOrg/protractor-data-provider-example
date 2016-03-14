@@ -1,4 +1,4 @@
-var data = require('./exampleData.module.js');
+var employee = require('./exampleData.module.js');
 var using = require('jasmine-data-provider');
 
 describe('find Modus twitter accounts', function() {
@@ -8,7 +8,7 @@ describe('find Modus twitter accounts', function() {
 		browser.get('http://moduscreate.com/about');
 	});
 
-	using(data.twitterInfo, function(data, description) {
+	using(employee.twitterInfo, function(data, description) {
 
 		it("Twitter found for " + description, function() {
 			expect(element(by.cssContainingText('.name', description)).isPresent()).toBeTruthy(
@@ -20,5 +20,9 @@ describe('find Modus twitter accounts', function() {
 			element(by.css('a[href="http://www.twitter.com/' + data.handle + '"]')).click();
 			expect(browser.getTitle()).toEqual(description + " (@" + data.handle + ") | Twitter"); 
 		})
+	});
+
+	afterEach(function() {
+		browser.ignoreSynchronization = false;
 	})
 })
