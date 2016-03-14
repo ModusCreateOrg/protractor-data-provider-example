@@ -1,4 +1,4 @@
-var employee = require('./exampleData.module.js');
+var employee = require('./employeeData.module.js');
 var using = require('jasmine-data-provider');
 
 describe('find Modus twitter accounts', function() {
