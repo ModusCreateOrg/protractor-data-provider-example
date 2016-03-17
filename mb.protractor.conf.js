@@ -7,13 +7,26 @@ exports.config = {
 		defaultTimeoutInterval: 30000,
 		print: function() {}
 	},
-	capabilities: {
-		browserName: 'chrome'
-	},
 	params: {
 		baseUrl: 'http://moduscreate.com/about'
 	},
-	specs: [],
+	multiCapabilities:[{
+		logName: 'Chrome - Repeatable Tests',
+		browserName: 'chrome',
+		name: 'chrome-repeat',
+		count: 1,
+		shardTestFiles: true,
+		maxInstances: 1,
+		specs: []
+	}, {
+		logName: 'Firefox - Repeatable Tests',
+		browserName: 'firefox',
+		name: 'ff-repeat',
+		count: 1,
+		shardTestFiles: true,
+		maxInstances: 2,
+		specs: []
+	}],
 	suites: {
 		repeatable: 'example/example.spec.js'
 	},

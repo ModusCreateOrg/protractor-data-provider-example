@@ -5,7 +5,7 @@ describe('find Modus twitter accounts', function() {
 
 	beforeEach(function() {
 		browser.ignoreSynchronization = true;
-		browser.get('http://moduscreate.com/about');
+		browser.get(browser.params.baseUrl);
 	});
 
 	using(employee.twitterInfo, function(data, description) {

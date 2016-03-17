@@ -1,6 +1,8 @@
 # protractor-data-provider-example
 Example project for blog post on using Protractor and Jasmine Data Provider to iterate over the same test spec with different test data.
 
+Check out the tutorial that goes along with this repo!
+
 
 ## Setup
 After cloning, do an npm install from the root directory
