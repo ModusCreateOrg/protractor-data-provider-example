@@ -2,11 +2,15 @@
 
 module.exports = {
 	twitterInfo: {
-		'Andrew Owen': {handle: 'modusAndrew'},
-		'Steve Dalgetty': {handle: 'stevedalgetty'},
-		'Dave Ackerman': {handle: 'dmackerman'},
-		//This one should fail to show you that the test is catching fake employees
-		// 'Fake Jay Garcia': {handle: 'notjaygarcia'}
+		'Andrew Owen': {handle: function() {
+			return 'modusAndrew';
+		}},
+		'Dave Ackerman': {handle: function() {
+			return 'dmackerman';
+		}},
+		'JD Jones': {handle: function() {
+			return 'Jaymes_Jones';
+		}}
 
 	}
 }

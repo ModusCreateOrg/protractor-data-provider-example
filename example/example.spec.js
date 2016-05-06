@@ -14,11 +14,11 @@ describe('find Modus twitter accounts', function() {
 			expect(element(by.cssContainingText('.name', description)).isPresent()).toBeTruthy(
 				'Employee not found'
 				);
-			expect(element(by.css('a[href="http://www.twitter.com/' + data.handle + '"]')).isPresent()).toBeTruthy(
+			expect(element(by.css('a[href="http://www.twitter.com/' + data.handle() + '"]')).isPresent()).toBeTruthy(
 				'Employee does not have twitter linked'
 				);
-			element(by.css('a[href="http://www.twitter.com/' + data.handle + '"]')).click();
-			expect(browser.getTitle()).toEqual(description + " (@" + data.handle + ") | Twitter"); 
+			element(by.css('a[href="http://www.twitter.com/' + data.handle() + '"]')).click();
+			expect(browser.getTitle()).toEqual(description + " (@" + data.handle() + ") | Twitter"); 
 		})
 	});
 
