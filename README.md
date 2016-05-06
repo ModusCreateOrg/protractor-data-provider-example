@@ -35,4 +35,6 @@ to this:
 }
 ```
 
+Then, just make sure in your spec file, to replace any instance of `data.handle` with `data.handle()`.
+
 Checkout the branch `data-with-functions` to see a working example.
